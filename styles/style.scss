@@ -1,0 +1,63 @@
+$topBackgroundColor: #bae3ee;
+$linkColor: #360c02;
+$textColor: #54af7a;
+$font-family:'Dancing Script',
+cursive;
+$backgroundColor: #caf7ee;
+
+@mixin background {
+    background-color: $backgroundColor;
+}
+
+@mixin topBackground {
+    background-color: $topBackgroundColor;
+}
+
+.top {
+    @include topBackground();
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+        font-family: $font-family;
+        color: $textColor;
+    }
+}
+
+aside {
+    @include background();
+    text-align: center;
+    flex-grow: 1;
+
+    div {
+        padding: 25px;
+
+        a {
+            text-decoration: none;
+            color: $linkColor;
+        }
+    }
+}
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    @include background();
+    flex-grow: 9;
+    margin-left: 5px;
+    padding: 20px;
+}
+
+input {
+    width: 70%;
+    margin: 10px;
+}
+
+.contact {
+    display: flex;
+}
